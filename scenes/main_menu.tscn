@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dh2nhxtcj3f4f"]
+[gd_scene load_steps=13 format=3 uid="uid://dh2nhxtcj3f4f"]
 
-[ext_resource type="Texture2D" uid="uid://6swhyqgdbiaa" path="res://assets/SpaceMap/space.png" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://cxxcii80g867g" path="res://assets/SpaceMap/space.png" id="1_7vrkn"]
 [ext_resource type="Script" uid="uid://vu1fhmkq4cnd" path="res://scripts/main_menu.gd" id="1_glbon"]
-[ext_resource type="FontFile" uid="uid://dh8eu61b81dre" path="res://assets/Adventure.otf" id="2_fu7sn"]
-[ext_resource type="FontFile" uid="uid://dpnoym8oyxvy" path="res://assets/Nasalization Rg.otf" id="3_glbon"]
-[ext_resource type="AudioStream" uid="uid://dmlbqngg5v8ve" path="res://assets/space-station-247790.mp3" id="4_jix8l"]
+[ext_resource type="FontFile" uid="uid://e73e4261jq22" path="res://assets/Adventure.otf" id="2_fu7sn"]
+[ext_resource type="FontFile" uid="uid://83ohcrq7ij1i" path="res://assets/Nasalization Rg.otf" id="3_glbon"]
+[ext_resource type="AudioStream" uid="uid://b7ywjyodsuyqb" path="res://assets/space-station-247790.mp3" id="4_jix8l"]
+[ext_resource type="Script" uid="uid://bi7ujfsxnju6i" path="res://scenes/music.gd" id="6_rtw2f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
 texture = ExtResource("1_7vrkn")
@@ -155,10 +156,12 @@ offset_top = -96.0
 offset_right = 192.0
 offset_bottom = -39.0
 grow_vertical = 0
+focus_mode = 0
 theme_override_fonts/font = ExtResource("3_glbon")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8ln24")
 text = "Mute Sound"
+script = ExtResource("6_rtw2f")
 
 [connection signal="pressed" from="VBoxContainer/StartGame" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_resume_pressed"]
